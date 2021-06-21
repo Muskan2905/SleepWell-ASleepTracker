@@ -1,0 +1,121 @@
+/*******************Tags*********************/
+body{
+    margin:0;
+    padding:0;
+    background-color:#5555dd;
+    font-family: 'Lato', sans-serif;
+    overflow: auto;
+}
+nav{
+    width:100%;
+    height:auto;
+    position:relative;
+    z-index:10;
+    background-color:#5555dd;
+    padding-bottom:10px;
+}
+h2{
+    font-weight:500;
+    color:#5555dd;
+}
+label{
+    margin-bottom:10px;
+}
+input{
+    width:96%;
+    border:1.4px solid #6a6ae2;
+    border-radius:5px;
+    padding:7px;
+}
+button{
+    min-width:20%;
+    background-color:white;
+    color:black;
+    border:1.5px solid #6a6ae2;
+    border-radius:5px;
+    margin:auto;
+    margin-top:-15px;
+    margin-bottom:7px;
+    padding:7px;
+}
+button:hover{
+    color:white;
+    font-weight:bold;
+    background-color:#5555dd;
+    cursor:pointer;
+}
+/*****************navbar*******************/
+.logo{
+    width:12rem;
+    height:auto;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+/***************form*********************/
+.form-section{
+    background-color:white;
+    margin:auto;
+    width:45%;
+    height:auto;
+    border-radius:10px;
+    padding:10px;
+    margin-top: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+.login-section{
+    margin-top:55px;
+}
+.intro{
+    display:flex;
+    justify-content: space-between;
+    margin-top:-10px;
+}
+.right-text{
+    margin-right:10px;
+    margin-top:25px;
+    color: #6a6ae2;
+    font-size:14px;
+}
+.link{
+    margin-left:3px;
+    text-decoration:none;
+    color:#6a6ae2;
+    font-weight:bold;
+}
+.error-message{
+    margin-top:-5px;
+    color:#6a6ae2;
+    font-weight:bold;
+    font-size:14px;
+}
+.inputData{
+    display:flex;
+    flex-direction: column;
+}
+
+
+/*******************media queries*****************/
+@media screen and (max-width:650px){
+  input{
+      width:88%;
+  }
+ .form-section{
+        width:50%;
+        margin-top:20px;
+  }
+  .login-section{
+      margin-top:60px;
+  }
+ .intro{
+     flex-direction:column;
+ }   
+ 
+ .right-text{
+     margin-top:-13px;
+     width:100%;
+ }
+ .link{
+     margin-left:0;
+ }
+}
