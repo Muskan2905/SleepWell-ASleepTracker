@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>SleepWell😴</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <style type="text/css">
+        @media screen and (max-width:375px) {
+
+            .modalContentBox h4 {
+                font-size: 16px;
+            }
+
+            .close-button {
+                font-size: 25px;
+            }
+
+            button {
+                margin-right: 5px;
+                font-size: 9px;
+            }
+        }
+    </style>
+    <!-- font embedding -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav>
+        <a href="/">
+            <img class="logo" src="images/logo.png" alt="logo-image">
+        </a>
+        <div class="toggler-button">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-list"><a class="nav-list-link" href="/report">Report</a></li>
+            <li class="nav-list"><a class="nav-list-link" href="/newentry">NewUserLogin</a></li>
+            <% if(flagValue===0){ %>
+                <li class="nav-list"><a class="nav-list-link" href="/signup">SignUp</a></li>
+                <li class="nav-list"><a class="nav-list-link" href="/login">Login</a></li>
+                <% } else{ %>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <li class="nav-list">
+                            <a href="#logout" class="nav-list-link">
+                                <input type="submit" class="logout-button" value="Logout">
+                            </a>
+                        </li>
+                    </form>
+                    <% } %>
+        </ul>
+    </nav>
+    <div class="newuser-main">
+        <div class="newEntry-button">New Entry</div>
+        <div class="modalBox">
+            <div class="modalContentBox">
+                <span class="close-button">&times;</span>
+                <h4>Sleep Tracker</h4>
+                <form class="form-section" action="/newentry" method="post">
+                    <div class="date-block">
+                        <label for="date">Date :</label>
+                        <input id="date" type="date" name="cdate" required>
+                    </div>
+                    <div class="time-block">
+                        <div>
+                            <label for="sleepTime">Sleep Time :</label>
+                            <input id="sleepTime" type="time" name="sleepwalaTime" required>
+                        </div>
+                        <div>
+                            <label for="wakeUpTime">WakeUp Time :</label>
+                            <input id="wakeUpTime" type="time" name="wakeUpwalaTime" required>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="reset">Reset</button>
+                        <button class="cancel-button" type="cancel">Cancel</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js" charset="utf-8"></script>
+</body>
+
+</html>
